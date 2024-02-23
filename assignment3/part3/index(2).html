@@ -21,84 +21,87 @@
 
     /* General setup */
 
-*  {
+*   {
       box-sizing: border-box;
       font-size: 10px;
-   }
+    }
 
-body {
-  margin: 0 auto;
-  min-width: 1000px;
-  max-width: 1400px;
-  line-height: 20px;
-  word-spacing: 5px;
-}
+    body {
+      margin: 0 auto;
+      min-width: 1000px;
+      max-width: 1400px;
+      line-height: 20px;
+      word-spacing: 5px;
+     }
+ 
+   /* Layout */
 
-/* Layout */
+    section {
+     float: left;
+     width: 50%;
+    }
 
-section {
-  float: left;
-  width: 50%;
-}
+    aside {
+     float: left;
+     width: 30%;
+    }
 
-aside {
-  float: left;
-  width: 30%;
-}
+    nav {
+     float: left;
+     width: 20%;
+    }
 
-nav {
-  float: left;
-  width: 20%;
-}
+    footer {
+     clear: both;
+    }
 
-footer {
-  clear: both;
-}
+    header, section, aside, nav, footer {
+     padding: 20px;
+    }
 
-header, section, aside, nav, footer {
-  padding: 20px;
-}
+   /* header and footer */
 
-/* header and footer */
+    header, footer {
+     border-top: 5px solid #a66;
+     border-bottom: 5px solid #a66;
+    }
 
-header, footer {
-  border-top: 5px solid #a66;
-  border-bottom: 5px solid #a66;
-}
+    header{
+      letter-spacing: 4px;
+      text-align: center;
+    }
 
-/* WRITE YOUR CODE BELOW HERE */
-header{
-  letter-spacing: 4px;
-  text-align: center;
-}
-h2+p{
-  text-indent: 20px;
-}
-a{
-  color: brown;
-  outline: none;
-  
-}
-a:hover{
-  text-decoration: none;
-  color: rgb(197, 19, 19);
-}
-h2{
-  font-size: medium;
-}
-h1{
-  font-size: large;
-}
-nav li{
-  list-style: none;
-  padding: 10px;
-  margin: 5px;
-  border:brown solid 1px;
-  text-align: center;
-  width: 100px;
-  height: auto;
-  line-height: 20px;
-  
+    h2+p{
+      text-indent: 20px;
+    }
+
+    a{
+      color: brown;
+      outline: none;
+    }
+
+    a:hover{
+      text-decoration: none;
+      color: rgb(197, 19, 19);
+    }
+
+    h2{
+      font-size: medium;
+    }
+
+    h1{
+      font-size: large;
+    }
+
+    nav li{
+      list-style: none;
+      padding: 10px;
+      margin: 5px;
+      border:brown solid 1px;
+      text-align: center;
+      width: 100px;
+      height: auto;
+      line-height: 20px;
     }
 
     nav a{
@@ -195,6 +198,14 @@ nav li{
     nav a:hover {
       color: #663366;
     }
+
+    .external-icon {
+       width: 10px; 
+       height: 10px;
+       margin-left: 1px; 
+       vertical-align: middle; /* Align the icon vertically with the text */
+    }
+
   </style>
 </head>
 <body>
@@ -206,7 +217,7 @@ nav li{
 <section>
   <h2>Brave new world</h2>
 
-  <p>It's a brave new world out there. Our children are being put in increasing more competitive situations, both during recreation, and as they start to move into the adult world of <a href="https://en.wikipedia.org/wiki/Examination">examinations</a>, <a href="https://en.wikipedia.org/wiki/Jobs">jobs</a>, <a href="https://en.wikipedia.org/wiki/Career">careers</a>, and other life choices. Having the wrong mindset, becoming <a href="https://en.wikipedia.org/wiki/Emotion">too emotional</a>, or making the wrong choices can contribute to them experiencing difficulty in taking their rightful place in today's ideal society.</p>
+  <p>It's a brave new world out there. Our children are being put in increasing more competitive situations, both during recreation, and as they start to move into the adult world of <a href="https://en.wikipedia.org/wiki/examinations">examinations<img class="external-icon" src="external-link-52.png" alt="External Link Icon"></a>, <a href="https://en.wikipedia.org/wiki/Jobs">jobs<img class="external-icon" src="external-link-52.png" alt="External Link Icon"></a>, <a href="https://en.wikipedia.org/wiki/Career">careers<img class="external-icon" src="external-link-52.png" alt="External Link Icon"></a>, and other life choices. Having the wrong mindset, becoming <a href="https://en.wikipedia.org/wiki/Emotion">too emotional<img class="external-icon" src="external-link-52.png" alt="External Link Icon"></a>, or making the wrong choices can contribute to them experiencing difficulty in taking their rightful place in today's ideal society.</p>
 
   <p>As concerned parents, guardians or carers, you will no doubt want to give your children the best possible start in life — and you've come to the right place.</p>
 
