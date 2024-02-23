@@ -6,7 +6,6 @@
   <title>St Huxley's Community College</title>
   <link href="style.css" type="text/css" rel="stylesheet">
   <style>
-
     /* Font Styles */
     @font-face {
       font-family: 'SerifFont';
@@ -20,13 +19,101 @@
            url('path_to_sans_serif_font.woff') format('woff');
     }
 
+    /* General setup */
+
+* {
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+body {
+  margin: 0 auto;
+  min-width: 1000px;
+  max-width: 1400px;
+  line-height: 20px;
+  word-spacing: 5px;
+}
+
+/* Layout */
+
+section {
+  float: left;
+  width: 50%;
+}
+
+aside {
+  float: left;
+  width: 30%;
+}
+
+nav {
+  float: left;
+  width: 20%;
+}
+
+footer {
+  clear: both;
+}
+
+header, section, aside, nav, footer {
+  padding: 20px;
+}
+
+/* header and footer */
+
+header, footer {
+  border-top: 5px solid #a66;
+  border-bottom: 5px solid #a66;
+}
+
+/* WRITE YOUR CODE BELOW HERE */
+header{
+  letter-spacing: 4px;
+  text-align: center;
+}
+h2+p{
+  text-indent: 20px;
+}
+a{
+  color: brown;
+  outline: none;
+  
+}
+a:hover{
+  text-decoration: none;
+  color: rgb(197, 19, 19);
+}
+h2{
+  font-size: medium;
+}
+h1{
+  font-size: large;
+}
+nav li{
+  list-style: none;
+  padding: 10px;
+  margin: 5px;
+  border:brown solid 1px;
+  text-align: center;
+  width: 100px;
+  height: auto;
+  line-height: 20px;
+  
+}
+nav a{
+ 
+  text-decoration: none;
+  font-weight: bolder;
+}
+nav ul{
+  font-weight: bold;
+  font-size: larger;
+}
+
     body {
-      box-sizing: border-box;
       font-family: 'SerifFont', serif;
       font-size: 10px;
       line-height: 1.6;
-      min-width: 1000px;
-      max-width: 1400ox;
     }
 
     h1, h2, h3, h4, h5, h6 {
@@ -34,28 +121,20 @@
       text-align: center;
     }
 
-    header{
-      letter-spacing: 4px;
-      text-align: center;
-    }
-    h2+p{
-      text-indent: 20px;
-    }
-
     h1 {
-      font-size: large;
+      font-size: 2.4rem;
       letter-spacing: 0.1rem;
     }
 
     h2 {
-      font-size: medium;
+      font-size: 1.8rem;
       letter-spacing: 0.05rem;
       margin-top: 40px;
     }
 
     p, ul, ol {
       letter-spacing: 0.02rem;
-      word-spacing: 5px;
+      word-spacing: 0.1rem;
     }
 
     section > h2:first-child + p {
@@ -66,8 +145,6 @@
     a {
       text-decoration: underline;
       color: #336699;
-      color: brown;
-      outline: none;
     }
 
     a:visited {
@@ -76,7 +153,6 @@
 
     a:focus, a:hover {
       text-decoration: none;
-      color: rgb(197, 19, 19);
     }
 
     a:focus {
@@ -92,58 +168,28 @@
       margin-top: 20px;
       margin-bottom: 20px;
       padding-left: 20px;
-      float: left;
-      width: 20%;
-    }
-    
-    footer {
-      clear: both;
     }
 
     li {
-      line-height: 202px;
+      line-height: 1.6;
       list-style-type: circle;
-    }
-    
-    /* Layout */
-
-    section {
-      float: left;
-      width: 50%;
-    }
-
-    aside {
-      float: left;
-      width: 30%;
     }
 
     /* Navigation Menu Styles */
     nav ul {
       list-style-type: none;
       padding: 0;
-      margin: 0 auto;
-      font-weight: bold;
-      font-size:larger;
-
+      margin: 20px 0;
     }
 
     nav li {
       margin-bottom: 10px;
-      list-style: none;
-      padding: 10px;
-      margin: 5px;
-      border:brown solid 1px;
-      text-align: center;
-      width: 100px;
-      height: auto;
-      line-height: 20px;
     }
 
     nav a {
       color: #336699;
       text-decoration: none;
       display: block;
-      font-weight: bolder;
     }
 
     nav a:hover {
