@@ -34,13 +34,21 @@
       text-align: center;
     }
 
+    header{
+      letter-spacing: 4px;
+      text-align: center;
+    }
+    h2+p{
+      text-indent: 20px;
+    }
+
     h1 {
-      font-size: 2.4rem;
+      font-size: large;
       letter-spacing: 0.1rem;
     }
 
     h2 {
-      font-size: 1.8rem;
+      font-size: medium;
       letter-spacing: 0.05rem;
       margin-top: 40px;
     }
@@ -58,6 +66,8 @@
     a {
       text-decoration: underline;
       color: #336699;
+      color: brown;
+      outline: none;
     }
 
     a:visited {
@@ -66,6 +76,7 @@
 
     a:focus, a:hover {
       text-decoration: none;
+      color: rgb(197, 19, 19);
     }
 
     a:focus {
@@ -81,11 +92,29 @@
       margin-top: 20px;
       margin-bottom: 20px;
       padding-left: 20px;
+      float: left;
+      width: 20%;
+    }
+    
+    footer {
+      clear: both;
     }
 
     li {
       line-height: 202px;
       list-style-type: circle;
+    }
+    
+    /* Layout */
+
+    section {
+      float: left;
+      width: 50%;
+    }
+
+    aside {
+      float: left;
+      width: 30%;
     }
 
     /* Navigation Menu Styles */
@@ -93,16 +122,28 @@
       list-style-type: none;
       padding: 0;
       margin: 0 auto;
+      font-weight: bold;
+      font-size:larger;
+
     }
 
     nav li {
       margin-bottom: 10px;
+      list-style: none;
+      padding: 10px;
+      margin: 5px;
+      border:brown solid 1px;
+      text-align: center;
+      width: 100px;
+      height: auto;
+      line-height: 20px;
     }
 
     nav a {
       color: #336699;
       text-decoration: none;
       display: block;
+      font-weight: bolder;
     }
 
     nav a:hover {
