@@ -1,90 +1,183 @@
-<!--
-	Name: Bhamra Sukhjeet Kaur
-	File: Assignment3.html
-	Date: 23 February 2024
-	Description: With a simple style and excellent design, this HTML code creates a stylish profile page for Jane Doe,
-  a web developer. It has a professional-looking contact information section and a brief introduction.
--->
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>St Huxley's Community College</title>
-    <link href="style.css" type="text/css" rel="stylesheet">
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>St Huxley's Community College</title>
+  <link href="style.css" type="text/css" rel="stylesheet">
+  <style>
+    /* Font Styles */
+    @font-face {
+      font-family: 'SerifFont';
+      src: url('path_to_serif_font.woff2') format('woff2'),
+           url('path_to_serif_font.woff') format('woff');
+    }
 
-  <header>
-    <h1>St Huxley's Community College</h1>
-  </header>
+    @font-face {
+      font-family: 'SansSerifFont';
+      src: url('path_to_sans_serif_font.woff2') format('woff2'),
+           url('path_to_sans_serif_font.woff') format('woff');
+    }
 
-  <section>
-      <h2>Brave new world</h2>
+    body {
+      font-family: 'SerifFont', serif;
+      font-size: 10px;
+      line-height: 1.6;
+    }
 
-      <p>It's a brave new world out there. Our children are being put in increasing more competitive situations, both during recreation, and as they start to move into the adult world of <a href="https://en.wikipedia.org/wiki/Examination">examinations</a>, <a href="https://en.wikipedia.org/wiki/Jobs">jobs</a>, <a href="https://en.wikipedia.org/wiki/Career">careers</a>, and other life choices. Having the wrong mindset, becoming <a href="https://en.wikipedia.org/wiki/Emotion">too emotional</a>, or making the wrong choices can contribute to them experiencing difficulty in taking their rightful place in today's ideal society.</p>
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'SansSerifFont', sans-serif;
+      text-align: center;
+    }
 
-      <p>As concerned parents, guardians or carers, you will no doubt want to give your children the best possible start in life — and you've come to the right place.</p>
+    h1 {
+      font-size: 2.4rem;
+      letter-spacing: 0.1rem;
+    }
 
-      <h2>The best start in life</h2>
+    h2 {
+      font-size: 1.8rem;
+      letter-spacing: 0.05rem;
+      margin-top: 40px;
+    }
 
-      <p>At St. Huxley's, we pride ourselves in not only giving our students a top quality education, but also giving them the societal and emotional intelligence they need to win big in the coming utopia. We not only excel at subjects such as genetics, data mining, and chemistry, but we also include compulsory lessons in:</p>
+    p, ul, ol {
+      letter-spacing: 0.02rem;
+      word-spacing: 0.1rem;
+    }
 
-      <ul>
-        <li>Emotional control</li>
-        <li>Judgement</li>
-        <li>Assertion</li>
-        <li>Focus and resolve</li>
-      </ul>
+    section > h2:first-child + p {
+      text-indent: 20px;
+    }
 
-      <p>If you are interested, then you next steps will likely be to:</p>
-      
-      <ol>
-        <li><a href="#">Call us</a> for more information</li>
-        <li><a href="#">Ask for a brochure</a>, which includes signup form</li>
-        <li><a href="#">Book a visit</a>!</li>
-      </ol>
-  </section>
+    /* Link Styles */
+    a {
+      text-decoration: underline;
+      color: #336699;
+    }
 
-  <aside>
+    a:visited {
+      color: #663366;
+    }
 
-    <h2>Top course choices</h2>
+    a:focus, a:hover {
+      text-decoration: none;
+    }
 
-    <ul>
-      <li><a href="#">Genetic engineering</a></li>
-      <li><a href="#">Genetic mutation</a></li>
-      <li><a href="#">Organic Chemistry</a></li>
-      <li><a href="#">Pharmaceuticals</a></li>
-      <li><a href="#">Biochemistry with behaviour</a></li>
-      <li><a href="#">Pure biochemistry</a></li>
-      <li><a href="#">Data mining</a></li>
-      <li><a href="#">Computer security</a></li>
-      <li><a href="#">Bioinformatics</a></li>
-      <li><a href="#">Cybernetics</a></li>
-    </ul>
+    a:focus {
+      outline: none;
+    }
 
-    <p><a href="#">See more</a></p>
+    a:active {
+      color: #990000;
+    }
 
-  </aside>
+    /* List Styles */
+    ul, ol {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      padding-left: 20px;
+    }
 
-  <nav>
+    li {
+      line-height: 1.6;
+      list-style-type: circle;
+    }
 
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Finding us</a></li>
-      <li><a href="#">Courses</a></li>
-      <li><a href="#">Staff</a></li>
-      <li><a href="#">Media</a></li>
-      <li><a href="#">Prospectus</a></li>
-    </ul>
+    /* Navigation Menu Styles */
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 20px 0;
+    }
 
-  </nav>
+    nav li {
+      margin-bottom: 10px;
+    }
 
-  <footer>
+    nav a {
+      color: #336699;
+      text-decoration: none;
+      display: block;
+    }
 
-    <p>&copy; 2016 St Huxley's Community College</p>
+    nav a:hover {
+      color: #663366;
+    }
+  </style>
+</head>
+<body>
 
-  </footer>
+<header>
+  <h1>St Huxley's Community College</h1>
+</header>
 
-  </body>
+<section>
+  <h2>Brave new world</h2>
+
+  <p>It's a brave new world out there. Our children are being put in increasing more competitive situations, both during recreation, and as they start to move into the adult world of <a href="https://en.wikipedia.org/wiki/Examination">examinations</a>, <a href="https://en.wikipedia.org/wiki/Jobs">jobs</a>, <a href="https://en.wikipedia.org/wiki/Career">careers</a>, and other life choices. Having the wrong mindset, becoming <a href="https://en.wikipedia.org/wiki/Emotion">too emotional</a>, or making the wrong choices can contribute to them experiencing difficulty in taking their rightful place in today's ideal society.</p>
+
+  <p>As concerned parents, guardians or carers, you will no doubt want to give your children the best possible start in life — and you've come to the right place.</p>
+
+  <h2>The best start in life</h2>
+
+  <p>At St. Huxley's, we pride ourselves in not only giving our students a top quality education, but also giving them the societal and emotional intelligence they need to win big in the coming utopia. We not only excel at subjects such as genetics, data mining, and chemistry, but we also include compulsory lessons in:</p>
+
+  <ul>
+    <li>Emotional control</li>
+    <li>Judgement</li>
+    <li>Assertion</li>
+    <li>Focus and resolve</li>
+  </ul>
+
+  <p>If you are interested, then your next steps will likely be to:</p>
+  
+  <ol>
+    <li><a href="#">Call us</a> for more information</li>
+    <li><a href="#">Ask for a brochure</a>, which includes a signup form</li>
+    <li><a href="#">Book a visit</a>!</li>
+  </ol>
+</section>
+
+<aside>
+
+  <h2>Top course choices</h2>
+
+  <ul>
+    <li><a href="#">Genetic engineering</a></li>
+    <li><a href="#">Genetic mutation</a></li>
+    <li><a href="#">Organic Chemistry</a></li>
+    <li><a href="#">Pharmaceuticals</a></li>
+    <li><a href="#">Biochemistry with behaviour</a></li>
+    <li><a href="#">Pure biochemistry</a></li>
+    <li><a href="#">Data mining</a></li>
+    <li><a href="#">Computer security</a></li>
+    <li><a href="#">Bioinformatics</a></li>
+    <li><a href="#">Cybernetics</a></li>
+  </ul>
+
+  <p><a href="#">See more</a></p>
+
+</aside>
+
+<nav>
+
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Finding us</a></li>
+    <li><a href="#">Courses</a></li>
+    <li><a href="#">Staff</a></li>
+    <li><a href="#">Media</a></li>
+    <li><a href="#">Prospectus</a></li>
+  </ul>
+
+</nav>
+
+<footer>
+
+  <p>&copy; 2016 St Huxley's Community College</p>
+
+</footer>
+
+</body>
 </html>
