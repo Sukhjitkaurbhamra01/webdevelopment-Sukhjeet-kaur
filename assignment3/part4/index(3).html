@@ -7,12 +7,87 @@
 -->
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Layout Task</title>
-    <link href="styles.css" rel="stylesheet" type="text/css">
-  </head>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Layout Task</title>
+  <link href="styles.css" rel="stylesheet" type="text/css">
+  <style>
+    /* Reset some default styles */
+    body, h1, h2, ul, li, p {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    /* Navigation styles */
+    nav {
+      background-color: #333;
+      padding: 10px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    /* Main content grid styles */
+    .main {
+      display: grid;
+      grid-template-columns: 2fr 1fr; /* Two columns with a ratio of 2:1 */
+      gap: 20px;
+      padding: 20px;
+    }
+
+    /* Article styles */
+    article {
+      max-width: 100%;
+    }
+
+    .feature {
+      float: right; /* Float the image to the right */
+      margin: 0 0 10px 10px; /* Margin to create space around the image */
+    }
+
+    /* Aside styles */
+    aside {
+      max-width: 100%;
+    }
+
+    .photos {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* Two columns */
+      gap: 10px;
+    }
+
+    .photos img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 768px) {
+      .main {
+        grid-template-columns: 1fr; /* Single column for smaller screens */
+      }
+    }
+  </style>
+</head>
 
 <body>
 
@@ -23,24 +98,24 @@
   <nav>
     <ul>
       <li>
-        <a href="">Home</a>
+        <a href="#">Home</a>
       </li>
       <li>
-        <a href="">Blog</a>
+        <a href="#">Blog</a>
       </li>
       <li>
-        <a href="">About us</a>
+        <a href="#">About us</a>
       </li>
       <li>
-        <a href="">Our history</a>
+        <a href="#">Our history</a>
       </li>
       <li>
-        <a href="">Contacts</a>
+        <a href="#">Contacts</a>
       </li>
     </ul>
   </nav>
 
-  <main class="grid">
+  <main class="main">
     <article>
       <h1>
         An Exciting Blog Post
@@ -64,7 +139,6 @@
 
       <p>Celery quandong swiss chard chicory earthnut pea potato. Salsify taro catsear garlic gram celery bitterleaf wattle
         seed collard greens nori. Grape wattle seed kombu beetroot horseradish carrot squash brussels sprout chard.</p>
-
     </article>
 
     <aside>
@@ -88,7 +162,6 @@
           <img src="images/balloon-sq5.jpg" alt="placeholder">
         </li>
       </ul>
-
     </aside>
   </main>
 
