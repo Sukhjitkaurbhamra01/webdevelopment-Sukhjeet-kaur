@@ -26,8 +26,8 @@
 
     /* Navigation styles */
     nav {
-      background-color: #333;
-      padding: 10px;
+      background-color: #000;
+      padding: .5em;
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -37,12 +37,15 @@
       list-style: none;
       display: flex;
       justify-content: space-around;
+      margin: 0;
+      padding: 0;
     }
 
     nav a {
       text-decoration: none;
       color: white;
       font-weight: bold;
+      padding: .5em 1em;
     }
 
     /* Main content grid styles */
@@ -56,28 +59,50 @@
     /* Article styles */
     article {
       max-width: 100%;
+      flex:1;
     }
 
     .feature {
-      float: right; /* Float the image to the right */
-      margin: 0 0 10px 10px; /* Margin to create space around the image */
+      float: left; /* Float the image to the left */
+      margin: 10px; /* Margin to create space around the image */
+      width:200px;
     }
 
     /* Aside styles */
     aside {
       max-width: 100%;
+      flex:1;
     }
 
     .photos {
       list-style: none;
+      margin: 0;
+      padding: 0;
       display: grid;
-      grid-template-columns: repeat(2, 1fr); /* Two columns */
-      gap: 10px;
+      grid-template-columns: repeat(auto-fill, minmax(100px,1fr));
+      grid-template-rows: repeat(auto-fill,minmax(100px,1fr));
+      gap: 2px;
     }
 
     .photos img {
       max-width: 100%;
       height: auto;
+      display: block;
+    }
+
+    .logo {
+    font-size: 200%;
+    padding: 50px 20px;
+    margin: 0 auto;
+    max-width: 980px;
+    }
+
+    .grid {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 980px;
+    flex-wrap: wrap;
+    display: flex;
     }
 
     /* Responsive styles */
@@ -120,7 +145,7 @@
       <h1>
         An Exciting Blog Post
       </h1>
-      <img src="images/balloon-sq6.jpg" alt="placeholder" class="feature">
+      <img src="part4/balloon-sq6.jpg" alt="balloon-sq6" class="forecast">
       <p>Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon
         azuki bean garlic.</p>
 
