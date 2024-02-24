@@ -11,9 +11,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>St Huxley's Community College</title>
+  <!-- External stylesheet link -->
   <link href="style.css" type="text/css" rel="stylesheet">
   <style>
     /* Font Styles */
+    /* Define unique fonts with @font-face */
     @font-face {
       font-family: 'SerifFont';
       src: url('path_to_serif_font.woff2') format('woff2'),
@@ -25,14 +27,13 @@
       src: url('path_to_sans_serif_font.woff2') format('woff2'),
            url('path_to_sans_serif_font.woff') format('woff');
     }
-
-    /* General setup */
-
+    
+    /* All items have global styling*/
 *   {
       box-sizing: border-box;
       font-size: 10px;
     }
-
+    /* Style for the body */
     body {
       margin: 0 auto;
       min-width: 1000px;
@@ -44,7 +45,7 @@
      }
  
    /* Layout */
-
+   
     section {
      float: left;
      width: 50%;
@@ -63,7 +64,7 @@
     footer {
      clear: both;
     }
-
+    
     header, section, aside, nav, footer {
      padding: 20px;
     }
@@ -79,11 +80,11 @@
       letter-spacing: 4px;
       text-align: center;
     }
-
+    /* Styling for h2 followed by p inside section */
     h2+p{
       text-indent: 20px;
     }
-
+    /* Design for every anchor tag */
     a{
       color: brown;
       outline: none;
@@ -134,7 +135,7 @@
       padding: 0;
       margin: 20px 0;
     } 
-
+     /* Styling for all heading tags (h1, h2, h3, h4, h5, h6) */
     h1, h2, h3, h4, h5, h6 {
       font-family: 'SansSerifFont', sans-serif;
       text-align:center;
@@ -168,7 +169,7 @@
     a:focus, a:hover {
       text-decoration: none;
     }
-    
+
     ul, ol {
       margin-top: 20px;
       margin-bottom: 20px;
@@ -195,6 +196,7 @@
   <h1>St Huxley's Community College</h1>
 </header>
 
+<!-- Main content section -->
 <section>
   <h2>Brave new world</h2> 
   <p>It's a brave new world out there. Our children are being put in increasing more competitive situations, both during recreation, and as they start to move into the adult world of <a href="https://en.wikipedia.org/wiki/examinations">examinations<img class="external-icon" src="external-link-52.png" alt="External Link Icon"></a>, <a href="https://en.wikipedia.org/wiki/Jobs">jobs<img class="external-icon" src="external-link-52.png" alt="External Link Icon"></a>, <a href="https://en.wikipedia.org/wiki/Career">careers<img class="external-icon" src="external-link-52.png" alt="External Link Icon"></a>, and other life choices. Having the wrong mindset, becoming <a href="https://en.wikipedia.org/wiki/Emotion">too emotional<img class="external-icon" src="external-link-52.png" alt="External Link Icon"></a>, or making the wrong choices can contribute to them experiencing difficulty in taking their rightful place in today's ideal society.</p>
@@ -204,7 +206,7 @@
   <h2>The best start in life</h2>
 
   <p>At St. Huxley's, we pride ourselves in not only giving our students a top quality education, but also giving them the societal and emotional intelligence they need to win big in the coming utopia. We not only excel at subjects such as genetics, data mining, and chemistry, but we also include compulsory lessons in:</p>
-
+  <!-- Unordered list -->
   <ul>
     <li>Emotional control</li>
     <li>Judgement</li>
@@ -213,7 +215,7 @@
   </ul>
 
   <p>If you are interested, then your next steps will likely be to:</p>
-  
+   <!-- Ordered list -->
   <ol>
     <li><a href="#">Call us</a> for more information</li>
     <li><a href="#">Ask for a brochure</a>, which includes a signup form</li>
@@ -256,7 +258,7 @@
 </nav>
 
 <footer>
-
+  <!-- Details regarding copyright -->
   <p>&copy; 2016 St Huxley's Community College</p>
 
 </footer>
