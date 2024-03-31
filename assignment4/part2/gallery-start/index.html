@@ -16,8 +16,10 @@
   <h1>Image gallery example</h1>
 
   <div class="full-img">
+    <!-- Main image which is displayed -->
     <img class="displayed-img" src="images/pic1.jpg" alt="Closeup of a human eye">
     <div class="overlay"></div>
+    <!-- Option to Darken/Lighten -->
     <button class="dark">Darken</button>
   </div>
 
@@ -51,7 +53,7 @@
     // Action handler for selecting the Darken or Lighten buttons
     btn.addEventListener('click', () => {
         const btnClass = btn.getAttribute('class');
-        // Choose between the Brighten and Darken modes
+    // Choose between the Brighten and Darken modes
         if (btnClass === 'dark') {
             overlay.style.backgroundColor = 'rgba(0,0,0,0.5)';
             btn.textContent = 'Lighten';
