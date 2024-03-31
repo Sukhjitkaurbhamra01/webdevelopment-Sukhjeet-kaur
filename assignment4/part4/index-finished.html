@@ -11,24 +11,24 @@
   <canvas></canvas>
 
   <script>
-    // set up canvas and get context
+    // create the canvas and get the information
     const canvas = document.querySelector('canvas');
     const ctx = canvas.getContext('2d');
 
     const width = canvas.width = window.innerWidth;
     const height = canvas.height = window.innerHeight;
     
-    // function to generate random number
+    // A characteristic which creates random numbers
     function random(min, max) {
       return Math.floor(Math.random() * (max - min + 1)) + min;
     }
     
-    // function to generate random RGB color value
+    // method for creating RGB color values randomly
     function randomRGB() {
       return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
     }
     
-    // Parent class for shapes
+    // Forms parent class
     class Shape {
       constructor(x, y, velX, velY) {
           this.x = x;
@@ -38,7 +38,7 @@
       }
     }
 
-    // Child class representing a bouncing ball
+    // A child class showing a ball which bounces
     class Ball extends Shape {
       constructor(x, y, velX, velY, exists, color, size) {
           super(x, y, velX, velY);
@@ -82,7 +82,7 @@
       }
     }
 
-    // Child class representing an evil circle
+    // A young class illustrating an endless loop
     class EvilCircle extends Shape {
       constructor(x, y) {
           super(x, y, 20, 20);
@@ -143,7 +143,6 @@
                 const distance = Math.sqrt(dx * dx + dy * dy);
 
                 if (distance < this.size + ball.size) {
-                  // TODO: change the existence the ball
                 }
             }
           }
@@ -152,12 +151,10 @@
 
     const balls = [];
 
-    // Make 25 balls with random properties
+    // Create 25 balls with random properties
     while (balls.length < 25) {
       const size = random(10, 20);
       const ball = new Ball(
-          // ball position always drawn at least one ball width
-          // away from the edge of the canvas, to avoid drawing errors
           random(0 + size, width - size),
           random(0 + size, height - size),
           random(-7, 7),
@@ -170,7 +167,7 @@
       balls.push(ball);
     }
 
-    // Main animation loop
+    // Main loop of animation
     function loop() {
       ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
       ctx.fillRect(0, 0, width, height);
@@ -186,7 +183,7 @@
 
     loop();
 
-    // Create and control the evil circle
+    // Set up and oversee the evil circle
     let evilCircle = new EvilCircle(
       random(0, width),
       random(0, height)
@@ -194,7 +191,7 @@
 
     evilCircle.setControls();
 
-    // TODO: Modify this evilLoop function for the evil circle
+    // TODO: For the evil circle, modify this evilLoop method
     function evilLoop() {
       ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
       ctx.fillRect(0, 0, width, height);
@@ -202,8 +199,8 @@
       requestAnimationFrame(loop);
     }
 
-    // TODO: Make the evil circle exist 
-    // TODO: Add counter to count how many balls are there on the screen
+    // TODO: Create the evil circle 
+    // TODO: For keeping an eye on the amount of balls on the display, add a counter to it
 
   </script>
 </body>
