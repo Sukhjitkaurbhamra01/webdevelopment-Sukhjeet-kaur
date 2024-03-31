@@ -15,7 +15,7 @@
   </div>
 
   <div class="thumb-bar">
-    <!-- JavaScript will populate this div with thumbnail images -->
+    <!-- This section will include preview pictures put in by JavaScript -->
   </div>
 
   <script>
@@ -24,13 +24,13 @@
     const btn = document.querySelector('button');
     const overlay = document.querySelector('.overlay');
 
-    /* Declaring the array of image filenames */
+    // List of names of files for pictures
     const imageArray = ['pic1.jpg', 'pic2.jpg', 'pic3.jpg', 'pic4.jpg', 'pic5.jpg'];
 
-    /* Declaring the alternative text for each image file */
+    // A substitute description for each image source
     const altText = ['A beautiful landscape', 'A beautiful landscape', 'A beautiful landscape', 'A beautiful landscape', 'A beautiful landscape'];
 
-    /* Looping through images */
+    // Creating previews by repeating over images
     for (let i = 0; i < imageArray.length; i++) {
         const newImage = document.createElement('img');
         newImage.setAttribute('src', 'images/' + imageArray[i]);
@@ -41,9 +41,10 @@
         });
     }
 
-    /* Wiring up the Darken/Lighten button */
+    // Action handler for selecting the Darken or Lighten buttons
     btn.addEventListener('click', () => {
         const btnClass = btn.getAttribute('class');
+        // Choose between the Brighten and Darken modes
         if (btnClass === 'dark') {
             overlay.style.backgroundColor = 'rgba(0,0,0,0.5)';
             btn.textContent = 'Lighten';
