@@ -9,7 +9,7 @@
 
 <body>
   <h1>bouncing balls</h1>
-  <canvas></canvas>
+  <canvas></canvas> <!-- Parts of the board where the balls are outlined -->
 
   <script>
     const canvas = document.querySelector('canvas');
@@ -17,16 +17,19 @@
 
     const width = canvas.width = window.innerWidth;
     const height = canvas.height = window.innerHeight;
-
+    
+    // Unplanned integer creation method within a set
     function random(min, max) {
       const num = Math.floor(Math.random() * (max - min + 1)) + min;
       return num;
     }
-
+    
+    // A method that creates an RGB color string at at random
     function randomRGB() {
       return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
     }
-
+    
+    // A class which resembles a bouncing ball
     class Ball {
       constructor(x, y, velX, velY, color, size) {
         this.x = x;
@@ -36,7 +39,8 @@
         this.color = color;
         this.size = size;
       }
-
+    
+    // Method for drawing the ball on the canvas
       draw() {
         ctx.beginPath();
         ctx.fillStyle = this.color;
@@ -56,7 +60,7 @@
         this.x += this.velX;
         this.y += this.velY;
       }
-
+    // Method for recognizing ball interactions
       collisionDetect() {
         for (const ball of balls) {
           if (this !== ball) {
@@ -73,7 +77,8 @@
     }
 
     const balls = [];
-
+    
+    // Make 25 balls with random properties
     while (balls.length < 25) {
       const size = random(10, 20);
       const ball = new Ball(
@@ -91,7 +96,8 @@
     function loop() {
       ctx.fillStyle = "rgb(0 0 0 / 25%)";
       ctx.fillRect(0, 0, width, height);
-
+    
+    // Sketch, refresh, and search for impacts on every ball.
       for (const ball of balls) {
         ball.draw();
         ball.update();
