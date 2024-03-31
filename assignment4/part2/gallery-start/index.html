@@ -1,27 +1,59 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head>
-    <meta charset="utf-8">
+<head>
+  <meta charset="utf-8">
+  <title>Image gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Image gallery example</h1>
 
-    <title>Image gallery</title>
+  <div class="full-img">
+    <img class="displayed-img" src="images/pic1.jpg" alt="Closeup of a human eye">
+    <div class="overlay"></div>
+    <button class="dark">Darken</button>
+  </div>
 
-    <link rel="stylesheet" href="style.css">
-    
-  </head>
+  <div class="thumb-bar">
+    <!-- JavaScript will populate this div with thumbnail images -->
+  </div>
 
-  <body>
-    <h1>Image gallery example</h1>
+  <script>
+    const displayedImage = document.querySelector('.displayed-img');
+    const thumbBar = document.querySelector('.thumb-bar');
+    const btn = document.querySelector('button');
+    const overlay = document.querySelector('.overlay');
 
-    <div class="full-img">
-      <img class="displayed-img" src="images/pic1.jpg" alt="Closeup of a human eye">
-      <div class="overlay"></div>
-      <button class="dark">Darken</button>
-    </div>
+    /* Declaring the array of image filenames */
+    const imageArray = ['pic1.jpg', 'pic2.jpg', 'pic3.jpg', 'pic4.jpg', 'pic5.jpg'];
 
-    <div class="thumb-bar">
+    /* Declaring the alternative text for each image file */
+    const altText = ['A beautiful landscape', 'A beautiful landscape', 'A beautiful landscape', 'A beautiful landscape', 'A beautiful landscape'];
 
+    /* Looping through images */
+    for (let i = 0; i < imageArray.length; i++) {
+        const newImage = document.createElement('img');
+        newImage.setAttribute('src', 'images/' + imageArray[i]);
+        newImage.setAttribute('alt', altText[i]);
+        thumbBar.appendChild(newImage);
+        newImage.addEventListener('click', (e) => {
+            displayedImage.src = e.target.src;
+        });
+    }
 
-    </div>
-    <script src="main.js"></script>
-  </body>
+    /* Wiring up the Darken/Lighten button */
+    btn.addEventListener('click', () => {
+        const btnClass = btn.getAttribute('class');
+        if (btnClass === 'dark') {
+            overlay.style.backgroundColor = 'rgba(0,0,0,0.5)';
+            btn.textContent = 'Lighten';
+            btn.setAttribute('class', 'light');
+        } else {
+            overlay.style.backgroundColor = 'rgba(0,0,0,0)';
+            btn.textContent = 'Darken';
+            btn.setAttribute('class', 'dark');
+        }
+    });
+  </script>
+</body>
 </html>
